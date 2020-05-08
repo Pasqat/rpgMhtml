@@ -1,0 +1,49 @@
+:root {
+  font-family: "Nunito";
+  --turqoise: #b9e3c6;
+  --gunmetal: #222831;
+  --indigo: #30475e;
+  --indigo2: #253647;
+  --orange: #f2a365;
+  --red: #d64045;
+  --white: #fff;
+  --white2: #ececec;
+  --white3: #fcf8f5;
+  --sand: #ffede1;
+  --grey: #dbd7d3;
+  --dark-sand: #e3b69a;
+  --warm-grey: #d0c9c2;
+  --dark-grey: #353433;
+  --purple: #7c74de;
+  --theme-transition: background 500ms ease-in-out, color 1000ms ease-in-out;
+}
+
+.dark {
+  --bg: var(--indigo);
+  --bg-contrast: var(--indigo2);
+  --bg-card: var(--gunmetal);
+  --bg-nav: var(--gunmetal);
+  --text: var(--white2);
+  --placeholder: var(--indigo);
+  --border-color: var(--orange);
+  --text-hover: var(--turqoise);
+  --link-active: var(--turqoise);
+  --icon-color: var(--dark-grey);
+  --shadow-l: rgb(25, 37, 49, 0.7);
+  --shadow-d: rgba(8, 13, 17, 0.774);
+}
+
+.light {
+  --bg: var(--white3);
+  --bg-contrast: var(--white);
+  --bg-card: var(--white2);
+  --bg-nav: var(--sand);
+  --text: var(--dark-grey);
+  --placeholder: var(--grey);
+  --border-color: var(--purple);
+  --text-hover: var(--purple);
+  --icon-color: var(--dark-sand);
+  --link-active: var(--purple);
+  --shadow-l: rgba(227, 182, 154, 0.2);
+  --shadow-d: var(--orange);
+}

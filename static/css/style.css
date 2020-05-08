@@ -2,55 +2,8 @@
 font-family: 'Galdeano', sans-serif;
 font-family: 'Mrs Sheppards', cursive; */
 
-:root {
-  font-family: "Nunito";
-  --turqoise: #b9e3c6;
-  --gunmetal: #222831;
-  --indigo: #30475e;
-  --indigo2: #253647;
-  --orange: #f2a365;
-  --red: #d64045;
-  --white: #fff;
-  --white2: #ececec;
-  --white3: #fcf8f5;
-  --sand: #ffede1;
-  --grey: #dbd7d3;
-  --dark-sand: #e3b69a;
-  --warm-grey: #d0c9c2;
-  --dark-grey: #353433;
-  --purple: #7c74de;
-  --theme-transition: background 500ms ease-in-out, color 1000ms ease-in-out;
-}
-
-.dark {
-  --bg: var(--indigo);
-  --bg-contrast: var(--indigo2);
-  --bg-card: var(--gunmetal);
-  --bg-nav: var(--gunmetal);
-  --text: var(--white2);
-  --placeholder: var(--indigo);
-  --border-color: var(--orange);
-  --text-hover: var(--turqoise);
-  --link-active: var(--turqoise);
-  --icon-color: var(--dark-grey);
-  --shadow-l: rgb(25, 37, 49, 0.7);
-  --shadow-d: rgba(8, 13, 17, 0.774);
-}
-
-.light {
-  --bg: var(--white3);
-  --bg-contrast: var(--white);
-  --bg-card: var(--white2);
-  --bg-nav: var(--sand);
-  --text: var(--dark-grey);
-  --placeholder: var(--grey);
-  --border-color: var(--purple);
-  --text-hover: var(--purple);
-  --icon-color: var(--dark-sand);
-  --link-active: var(--purple);
-  --shadow-l: rgba(227, 182, 154, 0.2);
-  --shadow-d: var(--orange);
-}
+/* Varables import */
+@import url(_variables.css);
 
 * {
   padding: 0;
@@ -233,7 +186,6 @@ h1 {
   display: flex;
   align-items: center;
   padding: 0.5rem 1rem;
-
 }
 
 .topbar-search {
@@ -255,7 +207,7 @@ h1 {
   align-items: stretch;
 }
 
-.input-group>.search-input {
+.input-group > .search-input {
   font-size: 0.85rem;
   height: auto;
   position: relative;
@@ -274,13 +226,13 @@ h1 {
   border-bottom-right-radius: 0;
 }
 
-.input-group>.search-input:focus {
+.input-group > .search-input:focus {
   outline: none;
   box-shadow: 15px 15px 15px 1px var(--shadow-l);
   transition: box-shadow 0.2s ease-in-out;
 }
 
-.input-group>.search-input::placeholder {
+.input-group > .search-input::placeholder {
   color: var(--placeholder);
   font-weight: 600;
 }
@@ -349,14 +301,48 @@ h1 {
 
 /* * ======== Content ============================ */
 
-.title-row {
+#content .title-row {
   margin-bottom: 1.5rem;
-  align-items: center;
   justify-content: space-between;
+}
+
+#content .title {
+  display: flex;
+  flex-direction: column;
 }
 
 #content {
   padding-bottom: 100px;
+  /* background: var(--bg);
+  border-radius: 2rem;
+  margin: 1%; */
+}
+
+#content .title-row .img-pg {
+  border-radius: 2rem;
+  width: 20em;
+  box-shadow: 0 5px 15px 1px var(--shadow-d);
+}
+
+.anchor-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.anchor-link {
+  color: var(--text);
+  text-decoration: none;
+  filter: grayscale(100%) opacity(0.7);
+  transition: color 400ms;
+}
+
+.anchor-link:hover {
+  filter: grayscale(0%) opacity(1);
+  color: var(--text-hover);
 }
 
 /* * ======== Footer ============================= */
@@ -397,7 +383,6 @@ h1 {
 }
 
 @media only screen and (max-width: 768px) {
-
   /* * navbar */
   .navbar {
     bottom: 0;
@@ -419,10 +404,44 @@ h1 {
 
   .nav-link i {
     font-size: 1rem;
-
   }
 
   /* * end of navbar */
+
+  /* * Content  */
+  .title-row {
+    flex-direction: column;
+  }
+
+  #content .title-row :nth-child(1) {
+    order: 2;
+  }
+  #content .title-row :nth-child(2) {
+    order: 1;
+  }
+  #content .title-row :nth-child(3) {
+    order: 3;
+  }
+
+  #content .title-row > .title {
+    padding: 0 0 2rem 0;
+  }
+
+  #content .title-row .title :nth-child(1) {
+    order: 1;
+  }
+  #content .title-row .title :nth-child(2) {
+    order: 2;
+  }
+
+  #content .title-row .title-anchor {
+    margin-left: auto;
+  }
+
+  #content .title-row .anchor-item > .anchor-link {
+    padding: 0 1em;
+  }
+  /* * end Content  */
 
   #wrapper #content-wrapper {
     margin-left: 0;
@@ -436,7 +455,6 @@ h1 {
 /* *------- Large Screen ----------------------- */
 
 @media only screen and (min-width: 769px) {
-
   /* * navbar */
   .navbar {
     top: 0;
@@ -469,4 +487,18 @@ h1 {
   }
 
   /* * end navbar */
+
+  /* * Content */
+
+  .title-row {
+    flex-direction: row;
+    align-items: stretch;
+  }
+
+  #content .title-row .anchor-item {
+    width: 100%;
+    padding: 1em;
+  }
+
+  /* * end Content */
 }

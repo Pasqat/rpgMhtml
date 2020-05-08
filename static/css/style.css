@@ -3,7 +3,7 @@ font-family: 'Galdeano', sans-serif;
 font-family: 'Mrs Sheppards', cursive; */
 
 /* Varables import */
-@import url(_variables.css);
+@import url(variables.css);
 
 * {
   padding: 0;

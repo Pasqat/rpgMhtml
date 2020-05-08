@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Custom Font -->
+    <script src="https://kit.fontawesome.com/05680d0362.js" crossorigin="anonymous"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Galdeano&family=Mrs+Sheppards&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+    <!-- Custom Atyle-->
+    <link rel="stylesheet" href="static/css/style.css">
+
+    <!-- TODO nome personaggio al posto del titolo -->
+    <title>Name Character</title>
+</head>
+
+<body class="dark">
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+        <!-- navbar -->
+        <nav class="navbar">
+            <ul class="navbar-nav">
+
+                <li class="logo">
+                    <a class="nav-link" href="#"><span class="link-text">rpgMASTER</span><i
+                            class="fas fa-dice-d20"></i></a>
+                </li>
+
+                <li class="nav-item"><a class="nav-link" href="dashboard"><i class="fas fa-columns"></i><span
+                            class="link-text">Dashboard</span></a>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="char_list.html"><i class="fas fa-pager"></i><span
+                            class="link-text">Character list</span></a>
+                </li>
+                <li class="nav-item"><a class="nav-link nav-link-active" href="char_sheet.html"><i
+                            class="fas fa-user-edit"></i><span class="link-text">Character sheet</span></a></li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" id="switchTheme">
+                        <i class="fas fa-sun"></i>
+                        <span class="link-text">Light mode</span>
+                    </a>
+                </li>
+                <!-- TODO Immagine Profilo con link a modifica profilo, password etc-->
+                <li class="nav-item">
+                    <a class="nav-link img" href="#">
+                        <img class="img-profile" src="https://source.unsplash.com/QAB-WJcbgJk/60x60">
+                    </a>
+                </li>
+
+            </ul>
+
+
+        </nav>
+
+        <!-- Content -->
+        <div id="content-wrapper" class="d-flex flex-column">
+            <div id="content">
+                <!-- TopBar -->
+                <div id="topbar" class="topbar">
+                    <form action="" class="topbar-search">
+                        <div class="input-group">
+                            <input type="text" name="search-bar" placeholder="Search for..." class="search-input" id="">
+                            <button class="btn-search">
+                                <i class="fas fa-search fa-sm" type="button"></i>
+                            </button>
+                        </div>
+                    </form>
+                    <ul class="topbar-right">
+                        <li class="topbar-item"><a class="topbar-link" href="#"><i class="fas fa-bell fa-fw"></i></a>
+                        </li>
+                        <li class="topbar-item"><a class="topbar-link" href="#"><i
+                                    class="fas fa-envelope fa-fw"></i></a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Title/breadcumb -->
+                <div class="container-fluid">
+
+                    <!-- Page title -->
+
+                    <div class="d-flex title-row">
+                        <div class="title">
+                            <!-- TODO Nome Personaggio -->
+                            <h1>NameCharacter sheet</h1>
+                        </div>
+                        <div class="title-misc">
+                            <span>Paladino 2</span>
+                            <span>Elfo</span>
+                            <span>Caotico buono</span>
+                        </div>
+
+
+                    </div>
+                    <!-- end of Title/breadcumb -->
+
+
+
+                    <!-- page content -->
+
+
+                    <p>That's amore findus</p>
+                </div>
+
+            </div>
+            <footer id="footer">
+                <div class="container">
+                    <div class="copyright">
+                        <span>rpgMaster© your fun by Pasquale and Giovanni 🧙‍♂️</span>
+                    </div>
+
+                </div>
+            </footer>
+            <!-- end of Footre -->
+        </div>
+        <!-- end of content -->
+
+
+
+    </div>
+
+    <script defer src="static/js/script.js"></script>
+</body>
+
+</html>
